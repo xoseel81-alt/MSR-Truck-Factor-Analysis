@@ -96,6 +96,10 @@ plt.ylim(0, 110)
 plt.grid(True, linestyle=':', alpha=0.6)
 plt.legend(loc='lower left', frameon=True, facecolor='white', edgecolor='none')
 
+
+rho_global, p_val_global = stats.spearmanr(df_global['total_lineas'], df_global['DA_%'])
+print(f"RHO GLOBAL: {rho_global:.4f}")
+print(f"P-VALOR GLOBAL: {p_val_global:.4f}")
 plt.tight_layout()
 plt.savefig('grafica_validez_externa.png', dpi=300)
 print('\n[ÉXITO] Gráfica científica generada y guardada como "grafica_validez_externa.png"')
